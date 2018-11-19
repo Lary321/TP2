@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CadastroClienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CadastroClienteForm.Designer.cs">
+      <DependentUpon>CadastroClienteForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="ClienteForm.cs">
       <SubType>Form</SubType>
@@ -53,6 +59,7 @@
     <Compile Include="ClienteForm.Designer.cs">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Endereco.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +89,9 @@
       <DependentUpon>RelatoriosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Relatorios.cs" />
+    <EmbeddedResource Include="CadastroClienteForm.resx">
+      <DependentUpon>CadastroClienteForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClienteForm.resx">
       <DependentUpon>ClienteForm.cs</DependentUpon>
     </EmbeddedResource>

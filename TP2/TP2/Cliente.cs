@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace TP2
 {
-    class Cliente
+    public class Cliente : Endereco
     {
+        public int codigoCliente = 0;
+        public string nomeCliente = " ";
+        public string CPF_CNPJ = " ";
+        public string telefone = " ";
     }
 }

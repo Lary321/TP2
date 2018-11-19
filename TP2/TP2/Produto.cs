@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace TP2
 {
     class Produto
-    {
+    {        
+        public int codigoProdServ = 0;
+        public string descricao = " ";
+        public string tipo = " ";
     }
 }
