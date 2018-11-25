@@ -15,45 +15,53 @@ namespace TP2
         public MenuPrincipal()
         {
             InitializeComponent();            
-            this.ControlBox = true;
-            this.FormBorderStyle = FormBorderStyle.FixedSingle;
-            this.StartPosition = FormStartPosition.CenterScreen;
+            ControlBox = true;
+            FormBorderStyle = FormBorderStyle.FixedSingle;
+            StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void clienteButton_Click(object sender, EventArgs e)
         {
-            ClienteForm cadastroCliente = new ClienteForm();
-            cadastroCliente.StartPosition = FormStartPosition.CenterScreen;
-            cadastroCliente.FormBorderStyle = FormBorderStyle.FixedSingle;
-            cadastroCliente.ControlBox = true;
-            cadastroCliente.ShowDialog();        
+            ClienteForm clienteForm = new ClienteForm
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                FormBorderStyle = FormBorderStyle.FixedSingle,
+                ControlBox = true
+            };
+            clienteForm.ShowDialog();            
         }
 
         private void prodServButton_Click(object sender, EventArgs e)
         {
-            ProdutoForm cadastroProdServ = new ProdutoForm();
-            cadastroProdServ.StartPosition = FormStartPosition.CenterScreen;
-            cadastroProdServ.FormBorderStyle = FormBorderStyle.FixedSingle;
-            cadastroProdServ.ControlBox = true;
+            ProdutoForm cadastroProdServ = new ProdutoForm
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                FormBorderStyle = FormBorderStyle.FixedSingle,
+                ControlBox = true
+            };
             cadastroProdServ.ShowDialog();
         }
 
         private void receitasButton_Click(object sender, EventArgs e)
         {
-            NotasForm cadastroNotas = new NotasForm();
-            cadastroNotas.StartPosition = FormStartPosition.CenterScreen;
-            cadastroNotas.FormBorderStyle = FormBorderStyle.FixedSingle;
-            cadastroNotas.ControlBox = true;
+            NotasForm cadastroNotas = new NotasForm
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                FormBorderStyle = FormBorderStyle.FixedSingle,
+                ControlBox = true
+            };
             cadastroNotas.ShowDialog();
         }
 
         private void relatoriosButton_Click(object sender, EventArgs e)
         {
-            RelatoriosForm relatorio = new RelatoriosForm();
-            relatorio.StartPosition = FormStartPosition.CenterScreen;
-            relatorio.FormBorderStyle = FormBorderStyle.FixedSingle;
-            relatorio.ControlBox = true;
+            RelatoriosForm relatorio = new RelatoriosForm
+            {
+                StartPosition = FormStartPosition.CenterScreen,
+                FormBorderStyle = FormBorderStyle.FixedSingle,
+                ControlBox = true
+            };
             relatorio.ShowDialog();
-        }
+        }        
     }
 }

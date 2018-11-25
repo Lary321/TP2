@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <clientes>
-  <cliente codigo="1" nome="Steve Jobs" telefone="2222-2222"/>
-  <cliente codigo="2" nome="Bill Gates" telefone="3333-3333"/>
-  <cliente codigo="3" nome="Steve Ballmer" telefone="4444-4444"/>
+  <cliente codigo="1" nome="Mariana" telefone="(12) 3908-2039" cpfcnpj="312.983.012-28" logradouro="AAAA" numero="10293" bairro="BBB" municipio="DDDD" estado="CC" cep="12098-310" />
+  <cliente codigo="2" nome="Julia" telefone="(12) 1238-2039" cpfcnpj="312.983.013-28" logradouro="hhh" numero="3123" bairro="BBsssB" municipio="EEE" estado="DD" cep="12098-431" />
+  <cliente codigo="3" nome="Luana" telefone="(12) 5322-2039" cpfcnpj="312.983.654-28" logradouro="yyyy" numero="3423" bairro="asdasd" municipio="FFF" estado="EE" cep="21312-431" />
 </clientes>

@@ -16,7 +16,7 @@ namespace TP2
 {
     public partial class ClienteForm : Form
     {
-        List<Cliente> dadosCliente;
+        List<Cliente> dadosCliente = new List<Cliente>();
 
         public ClienteForm()
         {
@@ -25,13 +25,12 @@ namespace TP2
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
-            dadosCliente = Cliente.listarClientes();
+            dadosCliente = Cliente.listarClientesFiltro();
             gridViewClientes.DataSource = dadosCliente;
         }
 
         private void incluirCliente_Click(object sender, EventArgs e)
         {
-            Close();
             CadastroClienteForm cadastroCliente = new CadastroClienteForm();
             cadastroCliente.StartPosition = FormStartPosition.CenterScreen;
             cadastroCliente.FormBorderStyle = FormBorderStyle.FixedSingle;
@@ -41,15 +40,19 @@ namespace TP2
 
         private void excluirCliente_Click(object sender, EventArgs e)
         {
-            dadosCliente = Cliente.listarClientes();
-
             if (gridViewClientes.SelectedRows.Count > 0)
             {
                 int indice = gridViewClientes.SelectedRows[0].Index;
-                Cliente.excluirCliente(dadosCliente[indice].codigoCliente);
-                dadosCliente = Cliente.listarClientes();
+                Cliente.excluirCliente(dadosCliente[indice].Codigo);
+                dadosCliente = Cliente.listarClientesFiltro();
                 gridViewClientes.DataSource = dadosCliente;
             }
+        }
+
+        private void filtrarCliente_Click(object sender, EventArgs e)
+        {
+            if()
+            Cliente.listarClientesFiltro();
         }
 
         /*private void gridViewClientes_SelectionChanged(object sender, EventArgs e)

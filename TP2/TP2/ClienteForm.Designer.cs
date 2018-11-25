@@ -78,6 +78,7 @@
             this.filtrarCliente.TabIndex = 3;
             this.filtrarCliente.Text = "Filtrar";
             this.filtrarCliente.UseVisualStyleBackColor = true;
+            this.filtrarCliente.Click += new System.EventHandler(this.filtrarCliente_Click);
             // 
             // excluirCliente
             // 
@@ -87,7 +88,6 @@
             this.excluirCliente.TabIndex = 5;
             this.excluirCliente.Text = "Excluir";
             this.excluirCliente.UseVisualStyleBackColor = true;
-            this.excluirCliente.Click += new System.EventHandler(this.excluirCliente_Click);
             // 
             // nomeTextBox
             // 
@@ -192,11 +192,10 @@
             // 
             // codigo
             // 
-            this.codigo.DataPropertyName = "codigo";
+            this.codigo.DataPropertyName = "Codigo";
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.NullValue = null;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             this.codigo.DefaultCellStyle = dataGridViewCellStyle1;
@@ -207,7 +206,7 @@
             // 
             // nome
             // 
-            this.nome.DataPropertyName = "nome";
+            this.nome.DataPropertyName = "Nome";
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
@@ -221,7 +220,7 @@
             // 
             // telefone
             // 
-            this.telefone.DataPropertyName = "telefone";
+            this.telefone.DataPropertyName = "Telefone";
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
@@ -235,7 +234,7 @@
             // 
             // cpfcnpj
             // 
-            this.cpfcnpj.DataPropertyName = "cpfcnpj";
+            this.cpfcnpj.DataPropertyName = "CPFCNPJ";
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;

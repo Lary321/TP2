@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroProdutoForm));
-            this.labelCodigoCliente = new System.Windows.Forms.Label();
+            this.labelCodigoProduto = new System.Windows.Forms.Label();
             this.descProdutoTextBox = new System.Windows.Forms.TextBox();
             this.dadosLabel = new System.Windows.Forms.Label();
             this.descricaoProdutoLabel = new System.Windows.Forms.Label();
@@ -40,14 +40,15 @@
             this.gravarProdutoButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // labelCodigoCliente
+            // labelCodigoProduto
             // 
-            this.labelCodigoCliente.AutoSize = true;
-            this.labelCodigoCliente.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCodigoCliente.Location = new System.Drawing.Point(153, 80);
-            this.labelCodigoCliente.Name = "labelCodigoCliente";
-            this.labelCodigoCliente.Size = new System.Drawing.Size(0, 23);
-            this.labelCodigoCliente.TabIndex = 35;
+            this.labelCodigoProduto.AutoSize = true;
+            this.labelCodigoProduto.BackColor = System.Drawing.SystemColors.Window;
+            this.labelCodigoProduto.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelCodigoProduto.Location = new System.Drawing.Point(153, 80);
+            this.labelCodigoProduto.Name = "labelCodigoProduto";
+            this.labelCodigoProduto.Size = new System.Drawing.Size(0, 23);
+            this.labelCodigoProduto.TabIndex = 35;
             // 
             // descProdutoTextBox
             // 
@@ -108,7 +109,6 @@
             this.valorProduto.Size = new System.Drawing.Size(62, 23);
             this.valorProduto.TabIndex = 37;
             this.valorProduto.Text = "Valor: ";
-            this.valorProduto.Click += new System.EventHandler(this.valorProduto_Click);
             // 
             // fecharProdutoButton
             // 
@@ -118,6 +118,7 @@
             this.fecharProdutoButton.TabIndex = 4;
             this.fecharProdutoButton.Text = "Fechar";
             this.fecharProdutoButton.UseVisualStyleBackColor = true;
+            this.fecharProdutoButton.Click += new System.EventHandler(this.fecharProdutoButton_Click);
             // 
             // gravarProdutoButton
             // 
@@ -127,6 +128,7 @@
             this.gravarProdutoButton.TabIndex = 3;
             this.gravarProdutoButton.Text = "Gravar";
             this.gravarProdutoButton.UseVisualStyleBackColor = true;
+            this.gravarProdutoButton.Click += new System.EventHandler(this.gravarProdutoButton_Click);
             // 
             // CadastroProdutoForm
             // 
@@ -138,13 +140,14 @@
             this.Controls.Add(this.gravarProdutoButton);
             this.Controls.Add(this.valorProdutoTextBox);
             this.Controls.Add(this.valorProduto);
-            this.Controls.Add(this.labelCodigoCliente);
+            this.Controls.Add(this.labelCodigoProduto);
             this.Controls.Add(this.descProdutoTextBox);
             this.Controls.Add(this.dadosLabel);
             this.Controls.Add(this.descricaoProdutoLabel);
             this.Controls.Add(this.codigoProdutoLabel);
             this.Name = "CadastroProdutoForm";
             this.Text = " ";
+            this.Load += new System.EventHandler(this.CadastroProdutoForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,7 +155,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Label labelCodigoCliente;
+        private System.Windows.Forms.Label labelCodigoProduto;
         private System.Windows.Forms.TextBox descProdutoTextBox;
         private System.Windows.Forms.Label dadosLabel;
         private System.Windows.Forms.Label descricaoProdutoLabel;

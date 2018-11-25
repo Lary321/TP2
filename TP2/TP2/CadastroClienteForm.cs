@@ -16,13 +16,11 @@ namespace TP2
 {
     public partial class CadastroClienteForm : Form
     {
-        private ArrayList cadastroCliente;
         int codCliente = 0;
 
         public CadastroClienteForm()
         {
             InitializeComponent();
-            cadastroCliente = new ArrayList();
             telefoneTextBox.SelectionStart = 0;
             cepTextBox.SelectionStart = 0;
             CPFTextBox.SelectionStart = 0;
@@ -47,29 +45,29 @@ namespace TP2
             CNPJTextBox.Visible = true;
         }
 
-
         private void gravarClienteButton_Click(object sender, EventArgs e)
         {
             Cliente c = new Cliente();
-            c.codigoCliente = int.Parse(labelCodigoCliente.Text);
-            c.nomeCliente = nomeTextBox.Text;
-            c.telefone = telefoneTextBox.Text;
-            c.logradouro = logradouroTextBox.Text;
-            c.numero = int.Parse(numeroTextBox.Text);
-            c.bairro = bairroTextBox.Text;
-            c.municipio = municipioTextBox.Text;
-            c.estado = estadoTextBox.Text;
-            c.cep = cepTextBox.Text;            
+
+            c.Codigo = Convert.ToInt32(labelCodigoCliente.Text);
+            c.Nome = nomeTextBox.Text;
+            c.Telefone = telefoneTextBox.Text;
+            c.Logradouro = logradouroTextBox.Text;
+            c.Numero = int.Parse(numeroTextBox.Text);
+            c.Bairro = bairroTextBox.Text;
+            c.Municipio = municipioTextBox.Text;
+            c.Estado = estadoTextBox.Text;
+            c.Cep = cepTextBox.Text;
             if (pessoaFisicaRadio.Checked == true)
             {
-                c.CPF_CNPJ = CPFTextBox.Text;
+                c.CPFCNPJ = CPFTextBox.Text;
             }
             else
             {
-                c.CPF_CNPJ = CNPJTextBox.Text;
+                c.CPFCNPJ = CNPJTextBox.Text;
             }
 
-            c.cadastrarCliente(c);
+            Cliente.adicionarCliente(c);
 
             MessageBox.Show("Cliente cadastrado com sucesso!", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -101,7 +99,7 @@ namespace TP2
             if (MessageBox.Show("Deseja cancelar suas alterações?", "", MessageBoxButtons.YesNo,
                 MessageBoxIcon.Information) == DialogResult.Yes)
             {
-                this.Close();
+                Close();
                 ClienteForm clienteForm = new ClienteForm();
                 clienteForm.StartPosition = FormStartPosition.CenterScreen;
                 clienteForm.FormBorderStyle = FormBorderStyle.FixedSingle;
