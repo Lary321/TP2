@@ -195,10 +195,10 @@
             // 
             // nomeTextBox
             // 
-            this.nomeTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nomeTextBox.Location = new System.Drawing.Point(142, 123);
             this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(377, 27);
+            this.nomeTextBox.Size = new System.Drawing.Size(377, 26);
             this.nomeTextBox.TabIndex = 1;
             // 
             // pessoaFisicaRadio
@@ -243,11 +243,11 @@
             // CPFTextBox
             // 
             this.CPFTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CPFTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPFTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPFTextBox.Location = new System.Drawing.Point(142, 236);
             this.CPFTextBox.Mask = "000,000,000-00";
             this.CPFTextBox.Name = "CPFTextBox";
-            this.CPFTextBox.Size = new System.Drawing.Size(144, 20);
+            this.CPFTextBox.Size = new System.Drawing.Size(144, 19);
             this.CPFTextBox.TabIndex = 4;
             // 
             // CNPJTextBox
@@ -274,10 +274,10 @@
             // 
             // logradouroTextBox
             // 
-            this.logradouroTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logradouroTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.logradouroTextBox.Location = new System.Drawing.Point(142, 397);
             this.logradouroTextBox.Name = "logradouroTextBox";
-            this.logradouroTextBox.Size = new System.Drawing.Size(227, 27);
+            this.logradouroTextBox.Size = new System.Drawing.Size(227, 26);
             this.logradouroTextBox.TabIndex = 6;
             // 
             // bairroTextBox

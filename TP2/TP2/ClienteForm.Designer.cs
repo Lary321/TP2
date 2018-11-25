@@ -32,23 +32,31 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.incluirCliente = new System.Windows.Forms.Button();
             this.filtrarCliente = new System.Windows.Forms.Button();
             this.excluirCliente = new System.Windows.Forms.Button();
-            this.nomeTextBox = new System.Windows.Forms.TextBox();
+            this.nomeFiltro = new System.Windows.Forms.TextBox();
             this.nomeClienteLabel = new System.Windows.Forms.Label();
-            this.CNPJTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.CPFTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.pessoaJuridicaRadio = new System.Windows.Forms.RadioButton();
-            this.pessoaFisicaRadio = new System.Windows.Forms.RadioButton();
-            this.tpPessoaLabel = new System.Windows.Forms.Label();
-            this.CPFCNPJLabel = new System.Windows.Forms.Label();
             this.gridViewClientes = new System.Windows.Forms.DataGridView();
             this.codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nome = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefone = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cpfcnpj = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Logradouro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Numero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Bairro = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Municipio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cep = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridViewClientes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -89,102 +97,54 @@
             this.excluirCliente.Text = "Excluir";
             this.excluirCliente.UseVisualStyleBackColor = true;
             // 
-            // nomeTextBox
+            // nomeFiltro
             // 
-            this.nomeTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeTextBox.Location = new System.Drawing.Point(134, 29);
-            this.nomeTextBox.Name = "nomeTextBox";
-            this.nomeTextBox.Size = new System.Drawing.Size(377, 27);
-            this.nomeTextBox.TabIndex = 6;
+            this.nomeFiltro.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nomeFiltro.Location = new System.Drawing.Point(92, 67);
+            this.nomeFiltro.Name = "nomeFiltro";
+            this.nomeFiltro.Size = new System.Drawing.Size(377, 27);
+            this.nomeFiltro.TabIndex = 6;
             // 
             // nomeClienteLabel
             // 
             this.nomeClienteLabel.AutoSize = true;
             this.nomeClienteLabel.BackColor = System.Drawing.SystemColors.Window;
             this.nomeClienteLabel.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nomeClienteLabel.Location = new System.Drawing.Point(63, 29);
+            this.nomeClienteLabel.Location = new System.Drawing.Point(21, 67);
             this.nomeClienteLabel.Name = "nomeClienteLabel";
             this.nomeClienteLabel.Size = new System.Drawing.Size(65, 23);
             this.nomeClienteLabel.TabIndex = 7;
             this.nomeClienteLabel.Text = "Nome:";
             // 
-            // CNPJTextBox
-            // 
-            this.CNPJTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CNPJTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CNPJTextBox.Location = new System.Drawing.Point(462, 88);
-            this.CNPJTextBox.Mask = "00,000,000/0000-00";
-            this.CNPJTextBox.Name = "CNPJTextBox";
-            this.CNPJTextBox.Size = new System.Drawing.Size(144, 19);
-            this.CNPJTextBox.TabIndex = 11;
-            // 
-            // CPFTextBox
-            // 
-            this.CPFTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CPFTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPFTextBox.Location = new System.Drawing.Point(462, 86);
-            this.CPFTextBox.Mask = "000,000,000-00";
-            this.CPFTextBox.Name = "CPFTextBox";
-            this.CPFTextBox.Size = new System.Drawing.Size(144, 20);
-            this.CPFTextBox.TabIndex = 12;
-            // 
-            // pessoaJuridicaRadio
-            // 
-            this.pessoaJuridicaRadio.AutoSize = true;
-            this.pessoaJuridicaRadio.BackColor = System.Drawing.SystemColors.Window;
-            this.pessoaJuridicaRadio.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pessoaJuridicaRadio.Location = new System.Drawing.Point(210, 85);
-            this.pessoaJuridicaRadio.Name = "pessoaJuridicaRadio";
-            this.pessoaJuridicaRadio.Size = new System.Drawing.Size(90, 27);
-            this.pessoaJuridicaRadio.TabIndex = 10;
-            this.pessoaJuridicaRadio.TabStop = true;
-            this.pessoaJuridicaRadio.Text = "Jurídica";
-            this.pessoaJuridicaRadio.UseVisualStyleBackColor = false;
-            // 
-            // pessoaFisicaRadio
-            // 
-            this.pessoaFisicaRadio.AutoSize = true;
-            this.pessoaFisicaRadio.BackColor = System.Drawing.SystemColors.Window;
-            this.pessoaFisicaRadio.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pessoaFisicaRadio.Location = new System.Drawing.Point(134, 84);
-            this.pessoaFisicaRadio.Name = "pessoaFisicaRadio";
-            this.pessoaFisicaRadio.Size = new System.Drawing.Size(72, 27);
-            this.pessoaFisicaRadio.TabIndex = 8;
-            this.pessoaFisicaRadio.TabStop = true;
-            this.pessoaFisicaRadio.Text = "Física";
-            this.pessoaFisicaRadio.UseVisualStyleBackColor = false;
-            // 
-            // tpPessoaLabel
-            // 
-            this.tpPessoaLabel.AutoSize = true;
-            this.tpPessoaLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.tpPessoaLabel.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tpPessoaLabel.Location = new System.Drawing.Point(27, 86);
-            this.tpPessoaLabel.Name = "tpPessoaLabel";
-            this.tpPessoaLabel.Size = new System.Drawing.Size(101, 23);
-            this.tpPessoaLabel.TabIndex = 13;
-            this.tpPessoaLabel.Text = "Tp. Pessoa:";
-            // 
-            // CPFCNPJLabel
-            // 
-            this.CPFCNPJLabel.AutoSize = true;
-            this.CPFCNPJLabel.BackColor = System.Drawing.SystemColors.Window;
-            this.CPFCNPJLabel.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPFCNPJLabel.Location = new System.Drawing.Point(363, 84);
-            this.CPFCNPJLabel.Name = "CPFCNPJLabel";
-            this.CPFCNPJLabel.Size = new System.Drawing.Size(93, 23);
-            this.CPFCNPJLabel.TabIndex = 9;
-            this.CPFCNPJLabel.Text = "CPF/CNPJ:";
-            // 
             // gridViewClientes
             // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.gridViewClientes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.gridViewClientes.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.gridViewClientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.gridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridViewClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.codigo,
             this.nome,
             this.telefone,
-            this.cpfcnpj});
+            this.cpfcnpj,
+            this.Logradouro,
+            this.Numero,
+            this.Bairro,
+            this.Municipio,
+            this.Estado,
+            this.Cep});
             this.gridViewClientes.Location = new System.Drawing.Point(-2, 127);
             this.gridViewClientes.Name = "gridViewClientes";
             this.gridViewClientes.Size = new System.Drawing.Size(938, 443);
@@ -193,58 +153,141 @@
             // codigo
             // 
             this.codigo.DataPropertyName = "Codigo";
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.codigo.DefaultCellStyle = dataGridViewCellStyle1;
-            this.codigo.Frozen = true;
-            this.codigo.HeaderText = "Código";
-            this.codigo.Name = "codigo";
-            this.codigo.ReadOnly = true;
-            // 
-            // nome
-            // 
-            this.nome.DataPropertyName = "Nome";
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            this.nome.DefaultCellStyle = dataGridViewCellStyle2;
-            this.nome.Frozen = true;
-            this.nome.HeaderText = "Nome";
-            this.nome.Name = "nome";
-            this.nome.ReadOnly = true;
-            // 
-            // telefone
-            // 
-            this.telefone.DataPropertyName = "Telefone";
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            this.telefone.DefaultCellStyle = dataGridViewCellStyle3;
-            this.telefone.Frozen = true;
-            this.telefone.HeaderText = "Telefone";
-            this.telefone.Name = "telefone";
-            this.telefone.ReadOnly = true;
+            this.codigo.DefaultCellStyle = dataGridViewCellStyle3;
+            this.codigo.Frozen = true;
+            this.codigo.HeaderText = "Código";
+            this.codigo.Name = "codigo";
+            this.codigo.ReadOnly = true;
+            this.codigo.Width = 80;
             // 
-            // cpfcnpj
+            // nome
             // 
-            this.cpfcnpj.DataPropertyName = "CPFCNPJ";
+            this.nome.DataPropertyName = "Nome";
             dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
-            this.cpfcnpj.DefaultCellStyle = dataGridViewCellStyle4;
+            this.nome.DefaultCellStyle = dataGridViewCellStyle4;
+            this.nome.Frozen = true;
+            this.nome.HeaderText = "Nome";
+            this.nome.Name = "nome";
+            this.nome.ReadOnly = true;
+            this.nome.Width = 250;
+            // 
+            // telefone
+            // 
+            this.telefone.DataPropertyName = "Telefone";
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            this.telefone.DefaultCellStyle = dataGridViewCellStyle5;
+            this.telefone.Frozen = true;
+            this.telefone.HeaderText = "Telefone";
+            this.telefone.Name = "telefone";
+            this.telefone.ReadOnly = true;
+            this.telefone.Width = 150;
+            // 
+            // cpfcnpj
+            // 
+            this.cpfcnpj.DataPropertyName = "CPFCNPJ";
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.cpfcnpj.DefaultCellStyle = dataGridViewCellStyle6;
             this.cpfcnpj.Frozen = true;
             this.cpfcnpj.HeaderText = "CPF/CNPJ";
             this.cpfcnpj.Name = "cpfcnpj";
             this.cpfcnpj.ReadOnly = true;
+            this.cpfcnpj.Width = 200;
+            // 
+            // Logradouro
+            // 
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.Logradouro.DefaultCellStyle = dataGridViewCellStyle7;
+            this.Logradouro.Frozen = true;
+            this.Logradouro.HeaderText = "Logradouro";
+            this.Logradouro.Name = "Logradouro";
+            this.Logradouro.ReadOnly = true;
+            this.Logradouro.Width = 210;
+            // 
+            // Numero
+            // 
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
+            this.Numero.DefaultCellStyle = dataGridViewCellStyle8;
+            this.Numero.Frozen = true;
+            this.Numero.HeaderText = "Nº";
+            this.Numero.Name = "Numero";
+            this.Numero.ReadOnly = true;
+            // 
+            // Bairro
+            // 
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.Black;
+            this.Bairro.DefaultCellStyle = dataGridViewCellStyle9;
+            this.Bairro.Frozen = true;
+            this.Bairro.HeaderText = "Bairro";
+            this.Bairro.Name = "Bairro";
+            this.Bairro.ReadOnly = true;
+            // 
+            // Municipio
+            // 
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.Black;
+            this.Municipio.DefaultCellStyle = dataGridViewCellStyle10;
+            this.Municipio.Frozen = true;
+            this.Municipio.HeaderText = "Município";
+            this.Municipio.Name = "Municipio";
+            this.Municipio.ReadOnly = true;
+            // 
+            // Estado
+            // 
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.Black;
+            this.Estado.DefaultCellStyle = dataGridViewCellStyle11;
+            this.Estado.Frozen = true;
+            this.Estado.HeaderText = "Estado";
+            this.Estado.Name = "Estado";
+            this.Estado.ReadOnly = true;
+            // 
+            // Cep
+            // 
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 12F);
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.LightSkyBlue;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
+            this.Cep.DefaultCellStyle = dataGridViewCellStyle12;
+            this.Cep.Frozen = true;
+            this.Cep.HeaderText = "CEP";
+            this.Cep.Name = "Cep";
+            this.Cep.ReadOnly = true;
             // 
             // ClienteForm
             // 
@@ -253,13 +296,7 @@
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(934, 611);
             this.Controls.Add(this.gridViewClientes);
-            this.Controls.Add(this.CNPJTextBox);
-            this.Controls.Add(this.CPFTextBox);
-            this.Controls.Add(this.pessoaJuridicaRadio);
-            this.Controls.Add(this.pessoaFisicaRadio);
-            this.Controls.Add(this.tpPessoaLabel);
-            this.Controls.Add(this.CPFCNPJLabel);
-            this.Controls.Add(this.nomeTextBox);
+            this.Controls.Add(this.nomeFiltro);
             this.Controls.Add(this.nomeClienteLabel);
             this.Controls.Add(this.excluirCliente);
             this.Controls.Add(this.filtrarCliente);
@@ -267,7 +304,6 @@
             this.Controls.Add(this.label1);
             this.Name = "ClienteForm";
             this.Text = "Cadastro de Clientes";
-            this.Load += new System.EventHandler(this.ClienteForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridViewClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -280,18 +316,18 @@
         private System.Windows.Forms.Button incluirCliente;
         private System.Windows.Forms.Button filtrarCliente;
         private System.Windows.Forms.Button excluirCliente;
-        private System.Windows.Forms.TextBox nomeTextBox;
+        private System.Windows.Forms.TextBox nomeFiltro;
         private System.Windows.Forms.Label nomeClienteLabel;
-        private System.Windows.Forms.MaskedTextBox CNPJTextBox;
-        private System.Windows.Forms.MaskedTextBox CPFTextBox;
-        private System.Windows.Forms.RadioButton pessoaJuridicaRadio;
-        private System.Windows.Forms.RadioButton pessoaFisicaRadio;
-        private System.Windows.Forms.Label tpPessoaLabel;
-        private System.Windows.Forms.Label CPFCNPJLabel;
         private System.Windows.Forms.DataGridView gridViewClientes;
         private System.Windows.Forms.DataGridViewTextBoxColumn codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn nome;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefone;
         private System.Windows.Forms.DataGridViewTextBoxColumn cpfcnpj;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Logradouro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Numero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Bairro;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Municipio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estado;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Cep;
     }
 }

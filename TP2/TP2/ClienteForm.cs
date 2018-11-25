@@ -23,12 +23,6 @@ namespace TP2
             InitializeComponent();
         }
 
-        private void ClienteForm_Load(object sender, EventArgs e)
-        {
-            dadosCliente = Cliente.listarClientesFiltro();
-            gridViewClientes.DataSource = dadosCliente;
-        }
-
         private void incluirCliente_Click(object sender, EventArgs e)
         {
             CadastroClienteForm cadastroCliente = new CadastroClienteForm();
@@ -44,31 +38,34 @@ namespace TP2
             {
                 int indice = gridViewClientes.SelectedRows[0].Index;
                 Cliente.excluirCliente(dadosCliente[indice].Codigo);
-                dadosCliente = Cliente.listarClientesFiltro();
+                dadosCliente = Cliente.listarClientesSemFiltro();
                 gridViewClientes.DataSource = dadosCliente;
             }
         }
 
         private void filtrarCliente_Click(object sender, EventArgs e)
         {
-            if()
-            Cliente.listarClientesFiltro();
-        }
+            string nome = "";
 
-        /*private void gridViewClientes_SelectionChanged(object sender, EventArgs e)
-        {
-            if (gridViewClientes.SelectedRows.Count > 0)
+            nome = nomeFiltro.Text;
+
+            if (nome == string.Empty)
             {
-                int indice = gridViewClientes.SelectedRows[0].Index;
-                if (indice >= 0)
+                dadosCliente = Cliente.listarClientesSemFiltro();
+                gridViewClientes.DataSource = dadosCliente;
+            }
+            else
+            {
+                foreach (Cliente x in dadosCliente)
                 {
-                    codigoClienteG.Text = Convert.ToString(dadosCliente[indice].codigoCliente);
-                    nomeClienteG.Text = dadosCliente[indice].nomeCliente;
-                    telefoneClienteG.Text = dadosCliente[indice].telefone;
+                    if (x.Nome == nome)
+                    {
+                        dadosCliente = Cliente.listarClientesFiltro(x.Codigo);
+                        gridViewClientes.DataSource = dadosCliente;
+                    }
                 }
             }
-        }*/
-
+        }
     }
 }
 

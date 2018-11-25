@@ -44,7 +44,7 @@ namespace TP2
         }
         #endregion
 
-        public static List<Cliente> listarClientesFiltro()
+        public static List<Cliente> listarClientesSemFiltro()
         {
             List<Cliente> dadosCliente = new List<Cliente>();
             XElement xml = XElement.Load("Clientes.xml");
@@ -56,11 +56,45 @@ namespace TP2
                     nome = x.Attribute("nome").Value,
                     telefone = x.Attribute("telefone").Value,
                     cpfcnpj = x.Attribute("cpfcnpj").Value,
+                    Logradouro = x.Attribute("logradouro").Value,
+                    Bairro = x.Attribute("bairro").Value,
+                    Numero = int.Parse(x.Attribute("numero").Value),
+                    Estado = x.Attribute("estado").Value,
+                    Cep = x.Attribute("cep").Value,
+                    Municipio = x.Attribute("municipio").Value
                 };
                 dadosCliente.Add(c);
             }
             return dadosCliente;
         }
+
+        public static List<Cliente> listarClientesFiltro(int cod)
+        {
+            List<Cliente> dadosCliente = new List<Cliente>();
+            XElement xml = XElement.Load("Clientes.xml");
+            foreach (XElement x in xml.Elements())
+            {
+                if (cod == int.Parse(x.Attribute("codigo").Value))
+                {
+                    Cliente c = new Cliente()
+                    {
+                        codigo = int.Parse(x.Attribute("codigo").Value),
+                        nome = x.Attribute("nome").Value,
+                        telefone = x.Attribute("telefone").Value,
+                        cpfcnpj = x.Attribute("cpfcnpj").Value,
+                        Logradouro = x.Attribute("logradouro").Value,
+                        Bairro = x.Attribute("bairro").Value,
+                        Numero = int.Parse(x.Attribute("numero").Value),
+                        Estado = x.Attribute("estado").Value,
+                        Cep = x.Attribute("cep").Value,
+                        Municipio = x.Attribute("municipio").Value
+                    };
+                    dadosCliente.Add(c);
+                }
+            }
+            return dadosCliente;
+        }
+
 
         public static void adicionarCliente(Cliente c)
         {
