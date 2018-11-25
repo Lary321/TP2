@@ -14,7 +14,7 @@ namespace TP2
     {
         public MenuPrincipal()
         {
-            InitializeComponent();
+            InitializeComponent();            
             this.ControlBox = true;
             this.FormBorderStyle = FormBorderStyle.FixedSingle;
             this.StartPosition = FormStartPosition.CenterScreen;
@@ -31,7 +31,7 @@ namespace TP2
 
         private void prodServButton_Click(object sender, EventArgs e)
         {
-            ProdServForm cadastroProdServ = new ProdServForm();
+            ProdutoForm cadastroProdServ = new ProdutoForm();
             cadastroProdServ.StartPosition = FormStartPosition.CenterScreen;
             cadastroProdServ.FormBorderStyle = FormBorderStyle.FixedSingle;
             cadastroProdServ.ControlBox = true;

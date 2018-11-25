@@ -11,5 +11,6 @@ namespace TP2
         public int codigoProdServ = 0;
         public string descricao = " ";
         public string tipo = " ";
+        public double valor = 0.0;
     }
 }

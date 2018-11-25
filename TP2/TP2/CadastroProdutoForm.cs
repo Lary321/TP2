@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace TP2
 {
-    public partial class ProdServForm : Form
+    public partial class CadastroProdutoForm : Form
     {
-        public ProdServForm()
+        public CadastroProdutoForm()
         {
             InitializeComponent();
+        }
+
+        private void valorProduto_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

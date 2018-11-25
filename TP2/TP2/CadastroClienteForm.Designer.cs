@@ -52,12 +52,13 @@
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.logradouroTextBox = new System.Windows.Forms.TextBox();
             this.bairroTextBox = new System.Windows.Forms.TextBox();
-            this.numeroTextBox = new System.Windows.Forms.TextBox();
             this.municipioTextBox = new System.Windows.Forms.TextBox();
             this.cepTextBox = new System.Windows.Forms.MaskedTextBox();
             this.gravarClienteButton = new System.Windows.Forms.Button();
             this.fecharClienteButton = new System.Windows.Forms.Button();
             this.labelCodigoCliente = new System.Windows.Forms.Label();
+            this.numeroTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.estadoTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // codigoClienteLabel
@@ -198,7 +199,7 @@
             this.nomeTextBox.Location = new System.Drawing.Point(142, 123);
             this.nomeTextBox.Name = "nomeTextBox";
             this.nomeTextBox.Size = new System.Drawing.Size(377, 27);
-            this.nomeTextBox.TabIndex = 13;
+            this.nomeTextBox.TabIndex = 1;
             // 
             // pessoaFisicaRadio
             // 
@@ -208,7 +209,7 @@
             this.pessoaFisicaRadio.Location = new System.Drawing.Point(142, 177);
             this.pessoaFisicaRadio.Name = "pessoaFisicaRadio";
             this.pessoaFisicaRadio.Size = new System.Drawing.Size(72, 27);
-            this.pessoaFisicaRadio.TabIndex = 14;
+            this.pessoaFisicaRadio.TabIndex = 2;
             this.pessoaFisicaRadio.TabStop = true;
             this.pessoaFisicaRadio.Text = "Física";
             this.pessoaFisicaRadio.UseVisualStyleBackColor = false;
@@ -222,7 +223,7 @@
             this.pessoaJuridicaRadio.Location = new System.Drawing.Point(218, 178);
             this.pessoaJuridicaRadio.Name = "pessoaJuridicaRadio";
             this.pessoaJuridicaRadio.Size = new System.Drawing.Size(90, 27);
-            this.pessoaJuridicaRadio.TabIndex = 15;
+            this.pessoaJuridicaRadio.TabIndex = 3;
             this.pessoaJuridicaRadio.TabStop = true;
             this.pessoaJuridicaRadio.Text = "Jurídica";
             this.pessoaJuridicaRadio.UseVisualStyleBackColor = false;
@@ -244,30 +245,32 @@
             this.CPFTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.CPFTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CPFTextBox.Location = new System.Drawing.Point(142, 236);
-            this.CPFTextBox.Mask = "000.000.000-00";
+            this.CPFTextBox.Mask = "000,000,000-00";
             this.CPFTextBox.Name = "CPFTextBox";
             this.CPFTextBox.Size = new System.Drawing.Size(144, 20);
-            this.CPFTextBox.TabIndex = 17;
+            this.CPFTextBox.TabIndex = 4;
             // 
             // CNPJTextBox
             // 
             this.CNPJTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.CNPJTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CNPJTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CNPJTextBox.Location = new System.Drawing.Point(142, 236);
-            this.CNPJTextBox.Mask = "00.000.000/0000-00";
+            this.CNPJTextBox.Mask = "00,000,000/0000-00";
             this.CNPJTextBox.Name = "CNPJTextBox";
-            this.CNPJTextBox.Size = new System.Drawing.Size(144, 20);
-            this.CNPJTextBox.TabIndex = 18;
+            this.CNPJTextBox.Size = new System.Drawing.Size(144, 19);
+            this.CNPJTextBox.TabIndex = 4;
+            this.CNPJTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CNPJTextBox_MouseClick);
             // 
             // telefoneTextBox
             // 
             this.telefoneTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.telefoneTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.telefoneTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.telefoneTextBox.Location = new System.Drawing.Point(142, 291);
             this.telefoneTextBox.Mask = "(00) 0000-0000";
             this.telefoneTextBox.Name = "telefoneTextBox";
-            this.telefoneTextBox.Size = new System.Drawing.Size(144, 20);
-            this.telefoneTextBox.TabIndex = 19;
+            this.telefoneTextBox.Size = new System.Drawing.Size(144, 19);
+            this.telefoneTextBox.TabIndex = 5;
+            this.telefoneTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.telefoneTextBox_MouseClick);
             // 
             // logradouroTextBox
             // 
@@ -275,59 +278,54 @@
             this.logradouroTextBox.Location = new System.Drawing.Point(142, 397);
             this.logradouroTextBox.Name = "logradouroTextBox";
             this.logradouroTextBox.Size = new System.Drawing.Size(227, 27);
-            this.logradouroTextBox.TabIndex = 20;
+            this.logradouroTextBox.TabIndex = 6;
             // 
             // bairroTextBox
             // 
-            this.bairroTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bairroTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bairroTextBox.Location = new System.Drawing.Point(142, 463);
             this.bairroTextBox.Name = "bairroTextBox";
-            this.bairroTextBox.Size = new System.Drawing.Size(227, 27);
-            this.bairroTextBox.TabIndex = 21;
-            // 
-            // numeroTextBox
-            // 
-            this.numeroTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numeroTextBox.Location = new System.Drawing.Point(480, 397);
-            this.numeroTextBox.Name = "numeroTextBox";
-            this.numeroTextBox.Size = new System.Drawing.Size(61, 27);
-            this.numeroTextBox.TabIndex = 22;
+            this.bairroTextBox.Size = new System.Drawing.Size(227, 26);
+            this.bairroTextBox.TabIndex = 8;
             // 
             // municipioTextBox
             // 
-            this.municipioTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.municipioTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.municipioTextBox.Location = new System.Drawing.Point(406, 535);
             this.municipioTextBox.Name = "municipioTextBox";
-            this.municipioTextBox.Size = new System.Drawing.Size(227, 27);
-            this.municipioTextBox.TabIndex = 23;
+            this.municipioTextBox.Size = new System.Drawing.Size(227, 26);
+            this.municipioTextBox.TabIndex = 11;
             // 
             // cepTextBox
             // 
             this.cepTextBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.cepTextBox.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cepTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cepTextBox.Location = new System.Drawing.Point(480, 463);
             this.cepTextBox.Mask = "00000-000";
             this.cepTextBox.Name = "cepTextBox";
-            this.cepTextBox.Size = new System.Drawing.Size(144, 20);
-            this.cepTextBox.TabIndex = 24;
+            this.cepTextBox.Size = new System.Drawing.Size(144, 19);
+            this.cepTextBox.TabIndex = 9;
+            this.cepTextBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cepTextBox_MouseClick);
             // 
             // gravarClienteButton
             // 
             this.gravarClienteButton.Location = new System.Drawing.Point(708, 563);
             this.gravarClienteButton.Name = "gravarClienteButton";
             this.gravarClienteButton.Size = new System.Drawing.Size(95, 36);
-            this.gravarClienteButton.TabIndex = 25;
+            this.gravarClienteButton.TabIndex = 12;
             this.gravarClienteButton.Text = "Gravar";
             this.gravarClienteButton.UseVisualStyleBackColor = true;
+            this.gravarClienteButton.Click += new System.EventHandler(this.gravarClienteButton_Click);
             // 
             // fecharClienteButton
             // 
             this.fecharClienteButton.Location = new System.Drawing.Point(823, 563);
             this.fecharClienteButton.Name = "fecharClienteButton";
             this.fecharClienteButton.Size = new System.Drawing.Size(95, 36);
-            this.fecharClienteButton.TabIndex = 26;
+            this.fecharClienteButton.TabIndex = 13;
             this.fecharClienteButton.Text = "Fechar";
             this.fecharClienteButton.UseVisualStyleBackColor = true;
+            this.fecharClienteButton.Click += new System.EventHandler(this.fecharClienteButton_Click);
             // 
             // labelCodigoCliente
             // 
@@ -338,18 +336,37 @@
             this.labelCodigoCliente.Size = new System.Drawing.Size(0, 23);
             this.labelCodigoCliente.TabIndex = 27;
             // 
+            // numeroTextBox
+            // 
+            this.numeroTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numeroTextBox.Location = new System.Drawing.Point(480, 393);
+            this.numeroTextBox.Mask = "00000";
+            this.numeroTextBox.Name = "numeroTextBox";
+            this.numeroTextBox.Size = new System.Drawing.Size(47, 26);
+            this.numeroTextBox.TabIndex = 7;
+            this.numeroTextBox.ValidatingType = typeof(int);
+            // 
+            // estadoTextBox
+            // 
+            this.estadoTextBox.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.estadoTextBox.Location = new System.Drawing.Point(142, 535);
+            this.estadoTextBox.Name = "estadoTextBox";
+            this.estadoTextBox.Size = new System.Drawing.Size(46, 26);
+            this.estadoTextBox.TabIndex = 10;
+            // 
             // CadastroClienteForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(934, 611);
+            this.Controls.Add(this.estadoTextBox);
+            this.Controls.Add(this.numeroTextBox);
             this.Controls.Add(this.labelCodigoCliente);
             this.Controls.Add(this.fecharClienteButton);
             this.Controls.Add(this.gravarClienteButton);
             this.Controls.Add(this.cepTextBox);
             this.Controls.Add(this.municipioTextBox);
-            this.Controls.Add(this.numeroTextBox);
             this.Controls.Add(this.bairroTextBox);
             this.Controls.Add(this.logradouroTextBox);
             this.Controls.Add(this.telefoneTextBox);
@@ -373,6 +390,7 @@
             this.Controls.Add(this.codigoClienteLabel);
             this.Name = "CadastroClienteForm";
             this.Text = "Cadastro de Cliente";
+            this.Load += new System.EventHandler(this.CadastroClienteForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -403,11 +421,12 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TextBox logradouroTextBox;
         private System.Windows.Forms.TextBox bairroTextBox;
-        private System.Windows.Forms.TextBox numeroTextBox;
         private System.Windows.Forms.TextBox municipioTextBox;
         private System.Windows.Forms.MaskedTextBox cepTextBox;
         private System.Windows.Forms.Button gravarClienteButton;
         private System.Windows.Forms.Button fecharClienteButton;
         private System.Windows.Forms.Label labelCodigoCliente;
+        private System.Windows.Forms.MaskedTextBox numeroTextBox;
+        private System.Windows.Forms.TextBox estadoTextBox;
     }
 }
