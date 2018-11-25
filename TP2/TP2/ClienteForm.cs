@@ -25,9 +25,7 @@ namespace TP2
 
         private void ClienteForm_Load(object sender, EventArgs e)
         {
-            Cliente c = new Cliente();
-            dadosCliente = c.listarClientes();
-            MessageBox.Show(dadosCliente[0].nomeCliente, "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            dadosCliente = Cliente.listarClientes();
             gridViewClientes.DataSource = dadosCliente;
         }
 
@@ -40,21 +38,19 @@ namespace TP2
             cadastroCliente.ControlBox = true;
             cadastroCliente.ShowDialog();
         }
-        
+
         private void excluirCliente_Click(object sender, EventArgs e)
         {
-            Cliente clienteExcluir = new Cliente();
-
-            dadosCliente = clienteExcluir.listarClientes();            
+            dadosCliente = Cliente.listarClientes();
 
             if (gridViewClientes.SelectedRows.Count > 0)
             {
                 int indice = gridViewClientes.SelectedRows[0].Index;
-                clienteExcluir.excluirCliente(dadosCliente[indice].codigoCliente);
-                dadosCliente = clienteExcluir.listarClientes();
+                Cliente.excluirCliente(dadosCliente[indice].codigoCliente);
+                dadosCliente = Cliente.listarClientes();
                 gridViewClientes.DataSource = dadosCliente;
             }
-        }               
+        }
 
         /*private void gridViewClientes_SelectionChanged(object sender, EventArgs e)
         {
